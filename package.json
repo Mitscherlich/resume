@@ -1,0 +1,10 @@
+{
+  "name": "@mitscherlich/profile",
+  "version": "0.1.0",
+  "description": "My personal profile",
+  "main": "index.js",
+  "repository": "https://github.com/Mitscherlich/mitscherlich.me",
+  "author": "Mitscherlich <mitscherlich36@gmail.com>",
+  "license": "CC-BY-NC-SA-4.0",
+  "private": true
+}
