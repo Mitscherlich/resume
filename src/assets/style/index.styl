@@ -1,0 +1,198 @@
+@import "_extends"
+@import "_variables"
+
+@import "_util/_mixins"
+@import "_util/_functions"
+
+.container
+  height inherit
+  width inherit
+  background linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%)
+  position relative
+  font-family "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif
+  center()
+
+#model, #app
+  position absolute
+
+#model
+  background-size px2rem(364) px2rem(724)
+  background-repeat no-repeat
+  background-image url('~@/assets/images/devices.jpg')
+  mask-image url('~@/assets/images/mask.svg')
+  display none
+  filter grayscale(1)
+  width px2rem(364)
+  height px2rem(724)
+  pointer-events none
+  z-index 200
+
+#app
+  z-index 100
+  height inherit
+  width inherit
+  background-color #eee
+
+.screen
+  height inherit
+  width inherit
+
+.toolbar, .wrapper, .actionbar
+  background rgba(234, 234, 234, .9)
+  position absolute
+  width inherit
+
+.toolbar
+  backdrop-filter saturate(180%) blur(5px)
+  color #333
+  padding-top px2rem(25)
+  padding-bottom px2rem(20)
+  text-align center
+  z-index 103
+
+.wrapper
+  height calc(100% - 50px)
+  z-index 101
+  overflow scroll
+  .content
+    user-select none
+    padding px2rem(67) px2rem(10) 0 px2rem(10)
+    li.message
+      position relative
+      display flex
+      margin px2rem(20) 0
+      .from, .to
+        height px2rem(48)
+        width px2rem(48)
+        border-radius px2rem(5)
+      .from
+        background url('~@/assets/images/icon.png') center / cover no-repeat
+      .to
+        background url('~@/assets/images/robot.png') center / cover no-repeat #fafafa
+      .body
+        flex 1
+        min-height px2rem(28)
+        margin 0 px2rem(10)
+        line-height px2rem(28)
+        color #333
+        background #fafafa
+        vertical-align middle
+        padding px2rem(10)
+        border-radius px2rem(5)
+        a
+          white-space nowrap
+          text-decoration none
+          color #007fff
+          &:visited
+            color #007fff
+        &::before
+          content ""
+          position absolute
+          top px2rem(16)
+          display block
+          border px2rem(8) solid transparent
+          border-left-color transparent
+          border-right-color #fafafa
+          left px2rem(42)
+          right auto
+        &[data-to]
+          background #96ea70
+          &::before
+            left auto
+            right px2rem(42)
+            border-left-color #96ea70
+            border-right-color transparent
+
+.actionbar
+  border-top 1px solid #e7e7eb
+  background #fafafa
+  bottom 0
+  height px2rem(50)
+  z-index 102
+  .actions
+    display flex
+    background url('~@/assets/images/bg.png') center / cover no-repeat
+    border-bottom 1px solid #e7e7eb
+    height px2rem(50)
+    user-select none
+    .action
+      flex 1
+      line-height px2rem(50)
+      text-align center
+      border-left 1px solid #e7e7eb
+      a
+        font-size px2rem(14)
+        text-decoration none
+        color #555
+        &:hover
+          color #333
+      .popup
+        position absolute
+        top px2rem(-160)
+        width 30%
+        height px2rem(150)
+        background #fafafa
+        border-radius px2rem(5)
+        transition all .1s ease-in-out
+        opacity 0
+        z-index 1
+        .item
+          border-bottom 1px solid #eee
+          color #555
+          &:hover
+            color #333
+          &:last-child
+            border-bottom none
+        &.active
+          top px2rem(-170)!important
+          opacity 1
+        &::before
+          content ""
+          position absolute
+          border px2rem(8) solid transparent
+          border-top-color #fafafa
+          top px2rem(150)
+          left calc(50% - 8px)
+
+@media screen and (max-width: 320px) // Mobile S: iPhone SE
+  .actions
+    padding-left px2rem(43)
+@media screen and (min-width: 321px) and (max-width: 375px) // Mobile M: iPhone 6/7/8/X
+  .actions
+    padding-left px2rem(50)
+@media screen and (min-width: 376px) and (max-width: 425px) // Mobile L: iPhone 6/7/8/Xs Plus/Max
+  .actions
+    padding-left px2rem(55)
+
+@media screen and (min-width: 426px) // Tablet: iPad/Pro, Laptop and large screen
+  #model, #app
+    top calc(50vh - 362px)
+  #model
+    display block
+  #app
+    width px2rem(314)
+    height px2rem(680)
+    margin px2rem(22) 0
+  .toolbar
+    padding-top px2rem(40)
+  .wrapper
+    height calc(100% - 78px)
+    .content
+      padding-top px2rem(82)
+      padding-bottom px2rem(10)
+  .actionbar
+    height px2rem(50)
+    width inherit
+    padding-bottom px2rem(30)
+    border-bottom-left-radius px2rem(30)
+    border-bottom-right-radius px2rem(30)
+    &::before
+      content ""
+      position absolute
+      border 3px solid #ccc
+      border-radius px2rem(3)
+      width px2rem(100)
+      left calc((314px - 100px) / 2)
+      bottom px2rem(12)
+    .actions
+      padding-left px2rem(40)
