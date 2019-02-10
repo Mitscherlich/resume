@@ -39,18 +39,20 @@
 
 .toolbar, .wrapper, .actionbar
   background rgba(234, 234, 234, .9)
-  position absolute
   width inherit
 
 .toolbar
+  position fixed
   backdrop-filter saturate(180%) blur(5px)
   color #333
-  padding-top px2rem(25)
-  padding-bottom px2rem(20)
+  padding-top px2rem(15)
+  padding-bottom px2rem(15)
+  border-bottom 1px solid rgba(224, 224, 224, .8)
   text-align center
   z-index 103
 
 .wrapper
+  position absolute
   height calc(100% - 50px)
   z-index 101
   overflow scroll
@@ -59,6 +61,7 @@
     padding px2rem(67) px2rem(10) 0 px2rem(10)
     li.message
       position relative
+      pointer-events none
       display flex
       margin px2rem(20) 0
       .from, .to
@@ -104,6 +107,7 @@
             border-right-color transparent
 
 .actionbar
+  position fixed
   border-top 1px solid #e7e7eb
   background #fafafa
   bottom 0
@@ -120,6 +124,8 @@
       line-height px2rem(50)
       text-align center
       border-left 1px solid #e7e7eb
+      &:first-child
+        border-left none
       a
         font-size px2rem(14)
         text-decoration none
@@ -157,9 +163,11 @@
 @media screen and (max-width: 320px) // Mobile S: iPhone SE
   .actions
     padding-left px2rem(43)
+
 @media screen and (min-width: 321px) and (max-width: 375px) // Mobile M: iPhone 6/7/8/X
   .actions
     padding-left px2rem(50)
+
 @media screen and (min-width: 376px) and (max-width: 425px) // Mobile L: iPhone 6/7/8/Xs Plus/Max
   .actions
     padding-left px2rem(55)
@@ -173,14 +181,19 @@
     width px2rem(314)
     height px2rem(680)
     margin px2rem(22) 0
+
   .toolbar
+    position absolute!important
     padding-top px2rem(40)
+
   .wrapper
     height calc(100% - 78px)
     .content
       padding-top px2rem(82)
       padding-bottom px2rem(10)
+
   .actionbar
+    position absolute!important
     height px2rem(50)
     width inherit
     padding-bottom px2rem(30)

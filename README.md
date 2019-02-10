@@ -13,7 +13,7 @@ My personal profile's data and website source code.
 Licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](LICNESE) License.
 
 [ci-url]: https://travis-ci.org/Mitscherlich/mitscherlich.me
-[ci-img]: https://img.shields.io/travis/Mitscherlich/mitscherlich.me.svg?style=popout-square&logo=travis&logoColor=3EAAAF
+[ci-img]: https://img.shields.io/travis/Mitscherlich/mitscherlich.me.svg?style=flat-square
 [up-url]: https://mitscherlich.me
 [up-img]: https://img.shields.io/website-up-down-green-red/https/mitscherlich.me.svg?style=flat-square
 [cc-url]: https://creativecommons.org/licenses/by-nc-sa/4.0/

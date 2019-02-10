@@ -32,7 +32,7 @@ answers:
     - 有了 Node.js 的帮助，我学习了 Express、Koa、Egg 等服务端框架的使用，以及 jQuery、Bootstrap、Vue.js 等
       前端类库和框架的使用
     - 我也用这些工具开发了一些不错的开源项目，例如你正看到的这个页面和我的博客，就都可以在我的 Github 找到，不妨去看看吧~
-    - 我的 Github：<a href="https://github.com/Mitscherlich">@Mitscherlich</a>
+    - 我的 Github：<a href="https://github.com/Mitscherlich" target="_blank">@Mitscherlich</a>
   habits:
     - 我热爱二次元，热爱 Coding，并且善于用代码解决生活中遇到的问题
     - 我喜欢打羽毛球，在夏天还喜欢游泳
@@ -40,4 +40,4 @@ answers:
 
 more:
   - 还有更多想要了解的，可以来我的<a href="https://blog.mitscherlich.me">博客</a>或者
-    <a href="https://github.com/Mitscherlich">Github</a> 看看！
+    <a href="https://github.com/Mitscherlich" target="_blank">Github</a> 看看！
