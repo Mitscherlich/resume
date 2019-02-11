@@ -41,6 +41,7 @@ const state = {
     if (state.typing) {
       return
     }
+    state.typing = true
     state.asked.add(req)
     const msg = state.questions[req]
     await state._addMessage({ from: null, msg, to: true })
@@ -71,7 +72,7 @@ export default {
       <main class="screen">
         <Toolbar typing={state.typing} />
         <Waterfall messages={state.messages} />
-        <ActionBar addMessage={state.sendQuestion} />
+        <ActionBar sendQuestion={state.sendQuestion} />
       </main>
     )
   }
