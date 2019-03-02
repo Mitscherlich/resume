@@ -1,25 +1,34 @@
+import * as m from 'mithril'
+import { ClassComponent, VnodeDOM, Vnode } from 'mithril'
+import { IMessages } from '../App'
 import BScroll from 'better-scroll'
 
-export default {
-  oninit() {
-    this.t = null
-    this.scroll = null
-  },
-  oncreate({ dom }) {
+export interface IWaterfallAttr {
+  messages: IMessages
+}
+
+export default class Waterfall implements ClassComponent<IWaterfallAttr> {
+  private t: number = null
+  private scroll: BScroll = null
+
+  public oncreate({ dom }: VnodeDOM) {
     this.scroll = new BScroll(dom, {
       scrollbar: true,
-      mouseWheel: true
+      mouseWhell: true
     })
-  },
-  onupdate() {
+  }
+
+  public onupdate() {
     if (this.t) {
       clearTimeout(this.t)
     }
     this.t = setTimeout(() => {
       this.scroll.scrollTo(0, this.scroll.maxScrollY, 300)
-    }, 50)
-  },
-  view(vnode) {
+      this.t = null
+    })
+  }
+
+  public view(vnode: Vnode<IWaterfallAttr>) {
     return (
       <article class="wrapper">
         <ul class="content">

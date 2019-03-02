@@ -8,13 +8,13 @@ const { resolve } = require('path')
 const r = path => resolve(__dirname, path)
 
 module.exports = {
-  entry: r('../src/index.js'),
+  entry: r('../src/index.ts'),
   output: {
     filename: '[name].[hash].js',
     path: r('../dist')
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.js', '.ts', '.tsx'],
     alias: {
       '@': r('../src')
     }
@@ -50,7 +50,7 @@ module.exports = {
   ],
   module: {
     rules: [
-      { test: /\.(js|jsx)$/, use: ['babel-loader'] },
+      { test: /\.(ts|tsx)$/, use: ['babel-loader'] },
       { test: require.resolve('mithril'), use: [{ loader: 'expose-loader', options: 'm' }] },
       {
         test: /\.styl$/,
@@ -65,7 +65,7 @@ module.exports = {
       { test: /\.jpg$/, use: [{ loader: 'url-loader', options: { mimetype: 'image/jpeg' } }] },
       { test: /\.png$/, use: [{ loader: 'url-loader', options: { mimetype: 'image/png' } }] },
       { test: /\.svg$/, use: ['file-loader'] },
-      { test: /\.yml$/, use: ['raw-loader'] }
+      { test: /\.(yaml|yml)$/, use: ['raw-loader'] }
     ]
   }
 }
