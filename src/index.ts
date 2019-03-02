@@ -1,4 +1,4 @@
-import m from 'mithril'
+import * as m from 'mithril'
 import 'normalize.css'
 
 import './assets/style/index.styl'
