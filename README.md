@@ -13,7 +13,7 @@ Just my interactive resume :sunglasses:
 via `git clone` from this repo:
 
 ```bash
-$ git clone https://github.com/Mitscherlich/mitscherlich.me.git
+$ git clone https://github.com/Mitscherlich/resume.git
 ```
 
 2. Install dependences
@@ -50,8 +50,8 @@ $ yarn build
 
 Shared under [MIT](LICENSE) License.
 
-[ci-url]: https://travis-ci.org/Mitscherlich/mitscherlich.me
-[ci-img]: https://img.shields.io/travis/Mitscherlich/mitscherlich.me.svg?style=flat-square
-[up-url]: https://mitscherlich.me
-[up-img]: https://img.shields.io/website-up-down-green-red/https/mitscherlich.me.svg?style=flat-square
-[license-img]: https://img.shields.io/github/license/Mitscherlich/mitscherlich.me.svg?style=flat-square
+[ci-url]: https://travis-ci.org/Mitscherlich/resume
+[ci-img]: https://img.shields.io/travis/Mitscherlich/resume.svg?style=flat-square
+[up-url]: https://mitscherlich.github.io/resume
+[up-img]: https://img.shields.io/website-up-down-green-red/https/mitscherlich.github.io/resume.svg?style=flat-square
+[license-img]: https://img.shields.io/github/license/Mitscherlich/mitscherlich.github.io/resume.svg?style=flat-square
