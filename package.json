@@ -19,7 +19,7 @@
     "@babel/polyfill": "^7.2.5",
     "@babel/runtime": "^7.3.1",
     "better-scroll": "^1.14.1",
-    "js-yaml": "^3.12.1",
+    "js-yaml": "^3.13.1",
     "mithril": "^1.1.6",
     "normalize.css": "^8.0.1"
   },
