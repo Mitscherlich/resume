@@ -1,0 +1,30 @@
+{
+  "name": "@mitscherlich/resume",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@better-scroll/core": "^2.4.2",
+    "@vueuse/core": "^6.0.0",
+    "@vueuse/head": "^0.6.0",
+    "dayjs": "^1.10.6",
+    "markdown-it": "^12.2.0",
+    "mitt": "^3.0.0",
+    "store": "^2.0.12",
+    "vue": "^3.2.4",
+    "vue-types": "^4.0.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.4.0",
+    "@vue/compiler-sfc": "^3.2.4",
+    "autoprefixer": "^10.3.2",
+    "postcss": "^8.3.6",
+    "postcss-pxtorem": "^6.0.0",
+    "tailwindcss": "^2.2.7",
+    "vite": "^2.5.0",
+    "vite-plugin-md": "^0.11.0"
+  }
+}

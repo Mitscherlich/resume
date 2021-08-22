@@ -1,0 +1,8 @@
+{
+  "question": "你都熟悉哪些专业技能？",
+  "answers": [
+    "我主要使用 Vue 进行开发，也对 React 有所了解，目前正在积极学习 Vue@3，正如你所见这个页面就是使用 Vue@3 开发的",
+    "同时我还能熟练使用 Node.js 进行开发，对 Webpack 和工程化也有所了解",
+    "除此之外还掌握基础 Linux 运维以及 shell 脚本自动化等，更多项目请访问我的 [Github](https://github.com/Mitscherlich)"
+  ]
+}
