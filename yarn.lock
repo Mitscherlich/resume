@@ -28,6 +28,11 @@
   resolved "https://registry.nlark.com/@babel/parser/download/@babel/parser-7.15.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fparser%2Fdownload%2F%40babel%2Fparser-7.15.3.tgz#3416d9bea748052cfcb63dbcc27368105b1ed862"
   integrity sha1-NBbZvqdIBSz8tj28wnNoEFse2GI=
 
+"@babel/standalone@^7.14.9":
+  version "7.15.3"
+  resolved "https://registry.nlark.com/@babel/standalone/download/@babel/standalone-7.15.3.tgz#60f74273202ffcc6bb1428918053449fe477227c"
+  integrity sha1-YPdCcyAv/Ma7FCiRgFNEn+R3Inw=
+
 "@babel/types@^7.12.0", "@babel/types@^7.13.0":
   version "7.15.0"
   resolved "https://registry.nlark.com/@babel/types/download/@babel/types-7.15.0.tgz?cache=0&sync_timestamp=1628111608723&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Ftypes%2Fdownload%2F%40babel%2Ftypes-7.15.0.tgz#61af11f2286c4e9c69ca8deb5f4375a73c72dcbd"
@@ -78,6 +83,17 @@
   version "4.0.0"
   resolved "https://registry.nlark.com/@types/parse-json/download/@types/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha1-L4u0QUNNFjs1+4/9zNcTiSf/uMA=
+
+"@vitejs/plugin-legacy@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.nlark.com/@vitejs/plugin-legacy/download/@vitejs/plugin-legacy-1.5.1.tgz#fef2a11c05d83f5ab13d2d04e52d75bac13c6e6c"
+  integrity sha1-/vKhHAXYP1qxPS0E5S11usE8bmw=
+  dependencies:
+    "@babel/standalone" "^7.14.9"
+    core-js "^3.16.0"
+    magic-string "^0.25.7"
+    regenerator-runtime "^0.13.9"
+    systemjs "^6.10.2"
 
 "@vitejs/plugin-vue@^1.4.0":
   version "1.4.0"
@@ -412,6 +428,11 @@ consolidate@^0.16.0:
   integrity sha1-oRhkdokw8vGUMWYKZZBmaPX73BY=
   dependencies:
     bluebird "^3.7.2"
+
+core-js@^3.16.0:
+  version "3.16.2"
+  resolved "https://registry.nlark.com/core-js/download/core-js-3.16.2.tgz?cache=0&sync_timestamp=1629206158334&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcore-js%2Fdownload%2Fcore-js-3.16.2.tgz#3f485822889c7fc48ef463e35be5cc2a4a01a1f4"
+  integrity sha1-P0hYIoicf8SO9GPjW+XMKkoBofQ=
 
 cosmiconfig@^7.0.0:
   version "7.0.1"
@@ -1113,6 +1134,11 @@ reduce-css-calc@^2.1.8:
     css-unit-converter "^1.1.1"
     postcss-value-parser "^3.3.0"
 
+regenerator-runtime@^0.13.9:
+  version "0.13.9"
+  resolved "https://registry.nlark.com/regenerator-runtime/download/regenerator-runtime-0.13.9.tgz?cache=0&sync_timestamp=1626993001371&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fregenerator-runtime%2Fdownload%2Fregenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
+  integrity sha1-iSV0Kpj/2QgUmI11Zq0wyjsmO1I=
+
 resolve-from@^4.0.0:
   version "4.0.0"
   resolved "https://registry.nlark.com/resolve-from/download/resolve-from-4.0.0.tgz?cache=0&sync_timestamp=1622605305717&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fresolve-from%2Fdownload%2Fresolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
@@ -1220,6 +1246,11 @@ supports-color@^7.1.0:
   integrity sha1-G33NyzK4E4gBs+R4umpRyqiWSNo=
   dependencies:
     has-flag "^4.0.0"
+
+systemjs@^6.10.2:
+  version "6.10.3"
+  resolved "https://registry.nlark.com/systemjs/download/systemjs-6.10.3.tgz?cache=0&sync_timestamp=1629217120054&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fsystemjs%2Fdownload%2Fsystemjs-6.10.3.tgz#7e783fccb58232f1d9eb05c7e1a661268945cade"
+  integrity sha1-fng/zLWCMvHZ6wXH4aZhJolFyt4=
 
 tailwindcss@^2.2.7:
   version "2.2.7"

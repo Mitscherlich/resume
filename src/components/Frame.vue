@@ -31,6 +31,7 @@
   width: 314px;
   height: 680px;
   background: #eaeaea;
+  padding: env(--safe-area-inset-top) 0 env(--safe-area-inset-bottom);
 }
 
 @media screen and (max-width: 640px) {
