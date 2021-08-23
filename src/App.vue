@@ -4,7 +4,7 @@
       <NavBar title="Mitscherlich" :typing="typing" />
     </template>
 
-    <MessageList @typing="(val) => (typing = val)" />
+    <MessageList @typing="(val) => (typing = val)" ref="storyboard" />
 
     <template #bottom>
       <ActionBar>
@@ -12,7 +12,7 @@
           v-for="{ id, text, menu } in menu"
           :key="id"
           v-bind="{ id, text, menu }"
-          @action="handleAction"
+          @action="sendMessage"
         />
       </ActionBar>
     </template>
@@ -27,8 +27,7 @@
 </template>
 
 <script setup>
-import { ref, unref, watch, provide, readonly, onMounted } from 'vue'
-import mitt from 'mitt'
+import { ref, unref, watch, onMounted } from 'vue'
 import storage from 'store'
 import Frame from './components/Frame.vue'
 import NavBar from './components/NavBar.vue'
@@ -40,8 +39,6 @@ import README from './README.md'
 import logo from './images/logo.png'
 import { interopDefault } from './_utils/interopDefault'
 import { menu } from './config/menu.json'
-import __init__ from './stories/__init__.json'
-import __fin__ from './stories/__fin__.json'
 
 const typing = ref(false)
 
@@ -53,20 +50,15 @@ const stories = Object.entries(
   import.meta.globEager('./stories/*.json')
 ).reduce((map, [path, module]) => {
   const id = path.replace(/(.*\/)*([^.]+).*/gi, '$2')
-  if (/__(.*)__/.test(id)) {
-    return map // skip __init__ & __fin__
-  }
   const story = interopDefault(module)
   return (map[id] = story), map
 }, {})
 
 const cache = new Map()
 
-const bus = mitt()
+const storyboard = ref(null)
 
-provide('bus', readonly(bus))
-
-const handleAction = (id) => {
+const sendMessage = (id) => {
   if (unref(typing)) {
     return // do nothing, just ignore :)
   }
@@ -75,13 +67,11 @@ const handleAction = (id) => {
     cache.set(id, true)
   }
 
-  const { question, answers } = stories[id]
-
-  bus.emit('action', { id, question, answers })
+  unref(storyboard).sendMessage(stories[id])
 }
 
 onMounted(() => {
-  bus.emit('action', __init__)
+  sendMessage('Hello')
 })
 
 const unwatch = watch(typing, () => {
@@ -97,7 +87,9 @@ const unwatch = watch(typing, () => {
   if (fulfilled) {
     unwatch()
 
-    bus.emit('action', __fin__)
+    if (!cache.has('Blog') || !cache.get('Blog')) {
+      sendMessage('Blog')
+    }
   }
 })
 </script>

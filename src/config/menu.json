@@ -6,11 +6,12 @@
       "menu": [
         { "id": "Achievement", "text": "个人成就" },
         { "id": "Education", "text": "教育经历" },
-        { "id": "Skills", "text": "专业技能" },
+        { "id": "Campus", "text": "校园经历" },
+        { "id": "Work", "text": "工作经历" },
         { "id": "Hobbits", "text": "兴趣爱好" }
       ]
     },
-    { "id": "Campus", "text": "校园经历" },
-    { "id": "Work", "text": "工作经历" }
+    { "id": "Skills", "text": "专业技能" },
+    { "id": "Github", "text": "Github" }
   ]
 }

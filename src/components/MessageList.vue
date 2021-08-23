@@ -16,14 +16,14 @@
 import dayjs from 'dayjs'
 import Markdown from 'markdown-it'
 import BScroll from '@better-scroll/core'
-import { ref, unref, reactive, inject, nextTick, onMounted } from 'vue'
+import { ref, unref, reactive, nextTick, onMounted } from 'vue'
 import { debouncedWatch } from '@vueuse/core'
 import { sleep } from '../_utils'
 import { randomTyping } from '../_utils/randomTyping'
 import MessageTitle from './MessageTitle.vue'
 import Message from './Message.vue'
 
-const bus = inject('bus')
+defineExpose({ sendMessage })
 
 const emit = defineEmits(['typing'])
 
@@ -48,7 +48,7 @@ debouncedWatch(messageList, () => {
   })
 })
 
-bus.on('action', async ({ id, question, answers }) => {
+async function sendMessage({ question, answers = [] }) {
   const { timestamp = Date.now() } = messageList[messageList.length - 1] ?? {}
 
   await updateMessageList({
@@ -56,7 +56,7 @@ bus.on('action', async ({ id, question, answers }) => {
     question,
     answers
   })
-})
+}
 
 async function updateMessageList({ title = false, question, answers = [] }) {
   emit('typing', true)
@@ -107,8 +107,7 @@ async function updateMessageList({ title = false, question, answers = [] }) {
 }
 
 .message-list-wrap::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
+  @apply w-0 bg-transparent;
 }
 
 .message-list {
