@@ -37,23 +37,32 @@ watch(state, () => {
 .mask {
   @apply w-full h-full absolute z-50;
   @apply flex flex-col items-center justify-center;
-  @apply bg-white dark:bg-gray-400 bg-opacity-75;
-  @apply backdrop-blur-sm;
-  backdrop-filter: var(--tw-backdrop-blur);
+  @apply bg-gray-100 dark:bg-gray-500 bg-opacity-60;
+  @apply backdrop-filter backdrop-blur-sm;
 }
 
 .logo-wrapper {
-  @apply w-40 h-40 mb-10;
-  @apply bg-white rounded-lg shadow-lg;
+  @apply w-40 h-40 mb-10 bg-white rounded-lg shadow-lg;
 }
 
 .content {
-  @apply text-lg text-gray-800 text-center;
-  @apply mb-4 mx-5;
+  @apply mb-4 mx-5 text-lg text-gray-800 text-center;
 }
 
 .checkbox-wrapper {
   @apply flex items-center;
+}
+
+input {
+  @apply appearance-none h-6 w-6 border border-gray-300 rounded-md;
+  @apply checked:bg-green-600 checked:border-transparent focus:outline-none;
+}
+
+input:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+  background-size: 100% 100%;
+  background-position: 50%;
+  background-repeat: no-repeat;
 }
 
 label {
@@ -63,9 +72,7 @@ label {
 
 <style>
 .mask .content a {
-  @apply mx-2;
-  @apply text-green-700;
-  transition: color 0.3s ease-in-out;
+  @apply text-green-700 transition-colors mx-2;
 }
 
 .mask .content a:hover {

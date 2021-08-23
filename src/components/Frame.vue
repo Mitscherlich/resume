@@ -40,7 +40,7 @@
   }
 
   .frame {
-    @apply w-screen h-screen;
+    @apply w-full h-full;
   }
 }
 
@@ -51,9 +51,7 @@
 }
 
 .top {
-  @apply top-0 sm:mt-5;
-  @apply h-11 sm:h-8;
-  @apply border-b;
+  @apply top-0 sm:mt-5 h-11 sm:h-8 border-b;
 }
 
 .content {
@@ -61,8 +59,6 @@
 }
 
 .bottom {
-  @apply bottom-0 sm:mb-5;
-  @apply h-11 sm:h-8;
-  @apply border-t;
+  @apply bottom-0 sm:mb-5 h-11 sm:h-8 border-t;
 }
 </style>

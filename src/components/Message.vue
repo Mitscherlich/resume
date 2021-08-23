@@ -39,8 +39,7 @@ const isReceive = computed(() => props.type === 'receive')
 }
 
 .message.send {
-  @apply flex-row-reverse;
-  @apply ml-auto;
+  @apply flex-row-reverse ml-auto;
 }
 
 .message.send .message-content {
@@ -51,8 +50,7 @@ const isReceive = computed(() => props.type === 'receive')
 .message-content {
   @apply flex items-center;
   @apply relative w-auto px-2 py-1;
-  @apply shadow-lg rounded;
-  @apply text-sm sm:text-xs text-gray-800;
+  @apply text-sm sm:text-xs text-gray-800 shadow-lg rounded;
   background: #f7f7f7;
   min-width: 100px;
   min-height: 28px;
@@ -62,7 +60,7 @@ const isReceive = computed(() => props.type === 'receive')
 .message-spinner,
 .message-spinner::before,
 .message-spinner::after {
-  border-radius: 50%;
+  @apply rounded-full;
   width: 1em;
   height: 1em;
   animation-fill-mode: both;
@@ -70,11 +68,10 @@ const isReceive = computed(() => props.type === 'receive')
 }
 
 .message-spinner {
-  @apply relative mx-auto my-1;
+  @apply relative mx-auto my-1 transform-gpu;
   top: -2.5em;
   color: #ccc;
   text-indent: -9999em;
-  transform: translateZ(0);
   animation-delay: -0.16s;
 }
 
@@ -106,8 +103,7 @@ const isReceive = computed(() => props.type === 'receive')
 
 <style>
 .message-content a {
-  @apply text-green-600;
-  transition: all ease-in-out 0.1s;
+  @apply text-green-600 transition-all;
 }
 
 .message-content a:hover {

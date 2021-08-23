@@ -17,7 +17,7 @@ const emit = defineEmits(['click'])
 
 <style scoped>
 .action-menu-item {
-  @apply flex items-center justify-center h-8;
+  @apply flex items-center justify-center h-10 sm:h-8;
 }
 
 .action-menu-item:not(:last-child) {
@@ -26,6 +26,6 @@ const emit = defineEmits(['click'])
 
 .action-menu-item-text {
   @apply px-2 py-1;
-  @apply text-xs text-center;
+  @apply text-sm sm:text-xs text-center;
 }
 </style>
