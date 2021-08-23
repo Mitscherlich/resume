@@ -79,10 +79,9 @@ const unwatch = watch(typing, () => {
     return // just ignore :)
   }
 
-  const fulfilled = Object.keys(stories).reduce(
-    (result, key) => (result &= cache.has(key) && cache.get(key)),
-    true
-  )
+  const fulfilled = Object.keys(stories)
+    .filter((key) => key !== 'Blog')
+    .reduce((result, key) => (result &= cache.has(key) && cache.get(key)), true)
 
   if (fulfilled) {
     unwatch()
