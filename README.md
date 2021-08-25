@@ -1,3 +1,5 @@
+> 🔈 This repo is now migrated to [Mitscherlich/Mitscherlich](https://github.com/Mitscherlich/Mitscherlich)
+
 # My personal resume
 
-Checkout on [mitscherlich.me](https://mitscherlich.me)
+Check this out on my website [mitscherlich.me](https://mitscherlich.me)
